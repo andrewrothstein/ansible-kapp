@@ -1,0 +1,7 @@
+---
+# vars file for kapp
+kapp_platform: '{{ kapp_os }}-{{ kapp_arch }}'
+kapp_url: '{{ kapp_mirror }}/v{{ kapp_ver }}/kapp-{{ kapp_platform }}{{ kapp_dotexe | default("") }}'
+kapp_checksum: '{{ kapp_checksums[kapp_ver][kapp_platform] }}'
+kapp_exe: '{{ kapp_install_dir }}/kapp-{{ kapp_ver }}-{{ kapp_platform }}{{ kapp_dotexe | default("") }}'
+kapp_link: '{{ kapp_install_dir }}/kapp'
